@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.display {
+  margin: 20px auto;
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  text-align: right;
+  font-size: 2em;
+  background-color: #d0d8dd;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 75px);
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+.keypad button {
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #5dbef6;
+  transition: background-color 0.5s;
+}
+/*added a class to make '+' cover 3 rows*/
+.plus {
+  grid-row: span 3;
+}
+
+/* Added an id so '0' can cover 2 column*/
+#zero {
+  grid-column: span 2;
+}
+/*Added some more hover css to make it look more interacting*/
+.keypad button:hover {
+  background-image: radial-gradient(circle,#fff47c, #6bfffa);
+  text-shadow: 2px 1px 2px rgb(0, 0, 0); /* Adjust the values as needed */
+  font-weight: bold;
+}
